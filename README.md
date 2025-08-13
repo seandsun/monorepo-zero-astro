@@ -6,4 +6,6 @@ Monorepo para practicar Astro.
 
 ## Apps
 
+1. [Página de inicio de noticias🔗](https://)
+
 <h3 align="center">< seandsun /></h3>

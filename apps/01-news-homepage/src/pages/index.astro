@@ -1,0 +1,14 @@
+---
+import Trending from '@/components/Trending.astro';
+import Hero from '@/components/Hero.astro';
+import New from '@/components/New.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="News homepage">
+  <div class="lg:grid lg:grid-cols-3 lg:gap-7">
+    <Hero />
+    <New />
+    <Trending />
+  </div>
+</Layout>

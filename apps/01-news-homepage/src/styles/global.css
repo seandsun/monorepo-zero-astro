@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url('../assets/fonts/Inter-VariableFont_slnt-wght.ttf')
+    format('truetype');
+  font-display: swap;
+}
+@theme {
+  /* Primary */
+  --color-Soft-orange: hsl(35, 77%, 62%);
+  --color-Soft-red: hsl(5, 85%, 63%);
+  /* Neutral */
+  --color-Off-white: hsl(36, 100%, 99%);
+  --color-Grayish-blue: hsl(233, 8%, 79%);
+  --color-Dark-grayish-blue: hsl(236, 13%, 42%);
+  --color-Very-dark-blue: hsl(240, 100%, 5%);
+
+  --font-Inter: 'Inter';
+}
+@layer components {
+  .h1 {
+    @apply text-2xl text-Very-dark-blue font-bold mb-6;
+  }
+  .p {
+    @apply text-Very-dark-blue max-w-prose mb-5;
+  }
+  .p-italic {
+    @apply max-w-prose text-Dark-grayish-blue/80 italic mb-5;
+  }
+}

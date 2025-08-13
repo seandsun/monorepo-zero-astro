@@ -1,0 +1,29 @@
+---
+import Logo from '@/assets/images/logo.svg';
+import IconClose from '@/assets/images/icon-menu-close.svg';
+import IconOpen from '@/assets/images/icon-menu.svg';
+import Navbar from '@/components/Navbar.astro';
+import MobileMenu from '@/components/MobileMenu';
+---
+
+<header class="flex justify-between items-center mb-8 lg:mb-14">
+  <a href="/">
+    <Logo />
+  </a>
+  <Navbar isHorizontal={true} />
+  <IconOpen class="cursor-pointer lg:hidden" id="open-btn" />
+  <div
+    class="bg-Very-dark-blue/50 fixed inset-0 hidden lg:hidden z-[9999]"
+    id="menu-modal"
+  >
+    <nav
+      class="bg-Off-white w-[254px] absolute right-0 h-screen flex flex-col items-end px-6 py-7"
+    >
+      <IconClose class="cursor-pointer" id="close-btn" />
+      <Navbar />
+    </nav>
+  </div>
+
+  <!-- Hidrata (ejecuta el js) cuando la página carga (client:load) -->
+  <MobileMenu client:load />
+</header>

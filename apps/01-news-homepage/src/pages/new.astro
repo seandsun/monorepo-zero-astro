@@ -1,0 +1,14 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { articles } from '@/common/articles';
+import NewArticle from '@/components/NewArticle.astro';
+import Button from '@/components/Button.astro';
+---
+
+<Layout title="New">
+  <h1 class="h1">All posts:</h1>
+  <section class="lg:grid lg:grid-cols-2 lg:gap-6">
+    {articles.map((article) => <NewArticle {...article} />)}
+  </section>
+  <Button />
+</Layout>

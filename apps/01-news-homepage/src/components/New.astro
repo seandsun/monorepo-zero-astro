@@ -1,0 +1,11 @@
+---
+import { articles } from '@/common/articles';
+import NewArticle from '@/components/NewArticle.astro';
+---
+
+<section
+  class="bg-Very-dark-blue text-Off-white px-[22px] py-6 mb-16 lg:col-span-1"
+>
+  <h2 class="text-Soft-orange font-bold text-[2rem]">New</h2>
+  {articles.slice(0, 3).map((article) => <NewArticle {...article} />)}
+</section>

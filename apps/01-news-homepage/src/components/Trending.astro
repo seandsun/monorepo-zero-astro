@@ -1,0 +1,8 @@
+---
+import { trendings } from '@/common/trendings';
+import TrendingArticle from '@/components/TrendingArticle.astro';
+---
+
+<section class="lg:col-span-3 lg:flex lg:gap-7">
+  {trendings.slice(0, 3).map((trending) => <TrendingArticle {...trending} />)}
+</section>

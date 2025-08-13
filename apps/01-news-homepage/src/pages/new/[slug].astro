@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import type { GetStaticPaths } from 'astro';
+import { articles } from '@/common/articles';
+import Button from '@/components/Button.astro';
+
+export const getStaticPaths = (() => {
+  // Se debe retornar un "[]" con los params, y "map()" retorna un "[]"
+  return articles.map((article) => ({ params: { slug: article.slug } }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const currentArticle = articles.filter((article) => article.slug === slug)[0];
+---
+
+<Layout title={currentArticle.title}>
+  <h1 class="h1" transition:name={currentArticle.title}>
+    {currentArticle.title}
+  </h1>
+  <p class="p-italic">
+    {currentArticle.description}
+  </p>
+  <p class="p">{currentArticle.content}</p>
+  <Button />
+</Layout>

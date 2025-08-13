@@ -1,0 +1,14 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { trendings } from '@/common/trendings';
+import TrendingArticle from '@/components/TrendingArticle.astro';
+import Button from '@/components/Button.astro';
+---
+
+<Layout title="Trending">
+  <h1 class="h1">All trendings</h1>
+  <section>
+    {trendings.map((trending) => <TrendingArticle {...trending} />)}
+  </section>
+  <Button />
+</Layout>
