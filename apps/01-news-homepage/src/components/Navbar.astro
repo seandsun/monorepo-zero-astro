@@ -25,7 +25,7 @@ const currentPathname = Astro.url.pathname;
 ---
 
 <ul
-  class={`flex flex-col gap-5  ${isHorizontal ? 'flex-row mt-0 hidden lg:flex lg:gap-8' : 'flex-col w-full mt-[86px]'}`}
+  class={`gap-5 ${isHorizontal ? 'flex-row mt-0 hidden lg:flex lg:gap-8' : 'flex flex-col w-full mt-[86px]'}`}
 >
   {
     navItems.map((item: NavItem) => (
