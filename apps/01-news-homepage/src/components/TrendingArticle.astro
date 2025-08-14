@@ -21,7 +21,7 @@ const { number, title, slug, description, img } = Astro.props as Props;
     <h3>
       <a
         class="inline-block mb-1 font-extrabold text-Very-dark-blue text-lg hover:text-Soft-red transition-all duration-300 ease-in-out"
-        href={`/trending/${slug}`}
+        href={`${import.meta.env.BASE_URL}trending/${slug}/`}
         transition:name={title}
       >
         {title}

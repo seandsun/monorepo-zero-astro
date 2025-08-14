@@ -14,7 +14,7 @@ const { slug, title, description } = Astro.props as Props;
   <h3>
     <a
       class="font-extrabold text-lg inline-block mb-2 cursor-pointer hover:text-Soft-orange transition-all duration-300 ease-in-out"
-      href={`/new/${slug}`}
+      href={`${import.meta.env.BASE_URL}new/${slug}/`}
       transition:name={title}
     >
       {title}

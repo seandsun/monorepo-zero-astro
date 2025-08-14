@@ -4,12 +4,15 @@ interface NavItem {
   href: string;
 }
 
+// Misma ruta del "base" en astro.config.mjs
+const siteBase = import.meta.env.BASE_URL;
+
 const navItems: NavItem[] = [
-  { name: 'Home', href: '/' },
-  { name: 'New', href: '/new' },
-  { name: 'Popular', href: '/popular' },
-  { name: 'Trending', href: '/trending' },
-  { name: 'Categories', href: '/categories' },
+  { name: 'Home', href: `${siteBase}` },
+  { name: 'New', href: `${siteBase}new/` },
+  { name: 'Popular', href: `${siteBase}popular/` },
+  { name: 'Trending', href: `${siteBase}trending/` },
+  { name: 'Categories', href: `${siteBase}categories/` },
 ];
 
 interface Props {
