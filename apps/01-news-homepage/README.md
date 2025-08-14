@@ -8,9 +8,9 @@
 - Astro
 - Preact
 
-[Ver app🔗](https://)
+[Ver app🔗](https://seandsun.github.io/monorepo-zero-astro/01-news-homepage/)
 
-![news homepage img demo](./src/assets/design/)
+![news homepage img demo](./src/assets/design/news-homepage-img.jpg)
 
 <div align="center">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
