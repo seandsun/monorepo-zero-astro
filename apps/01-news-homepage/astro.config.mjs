@@ -10,4 +10,8 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [preact()],
+  site: 'https://seandsun.github.io/monorepo-zero-astro/01-news-homepage/',
+  base: '/monorepo-zero-astro/01-news-homepage/',
+  trailingSlash: 'always',
+  outDir: '../../dist/01-news-homepage',
 });
